@@ -398,8 +398,8 @@ function renderChart(months) {
     <svg width="100%" height="${H}" viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="portGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="#0F1F4B" stop-opacity="0.13"/>
-          <stop offset="100%" stop-color="#0F1F4B" stop-opacity="0.01"/>
+          <stop offset="0%" stop-color="#1A6B3C" stop-opacity="0.13"/>
+          <stop offset="100%" stop-color="#1A6B3C" stop-opacity="0.01"/>
         </linearGradient>
         <clipPath id="portClip"><rect x="0" y="0" width="${cW}" height="${cH}"/></clipPath>
       </defs>
@@ -407,8 +407,8 @@ function renderChart(months) {
         ${yGrid}
         <g clip-path="url(#portClip)">
           <path d="${areaPath}" fill="url(#portGrad)"/>
-          <path d="${linePath}" fill="none" stroke="#0F1F4B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="${lastX}" cy="${lastY}" r="4" fill="#0F1F4B" stroke="white" stroke-width="2"/>
+          <path d="${linePath}" fill="none" stroke="#1A6B3C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="${lastX}" cy="${lastY}" r="4" fill="#1A6B3C" stroke="white" stroke-width="2"/>
         </g>
         ${xLabels}
       </g>
