@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kenso — Know Your Money Deeply</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 18 18" fill="none"><path d="M2 13 L6 7.5 L9.5 10.5 L13.5 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4 L14 4 L14 7" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    Kenso
+  </a>
+  <div class="nav-links">
+    <a href="budget.html">Budget</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="insights.html">Insights</a>
+    <a href="learn.html">Learn</a>
+    <a href="budget.html" class="nav-cta">Open dashboard</a>
+  </div>
+</nav>
+
+<div class="ticker-wrap">
+  <div class="ticker-inner"></div>
+</div>
+
+<div class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow"><span></span>Personal finance tracker &amp; planner</div>
+    <h1>Know your money.<br><em>Deeply.</em></h1>
+    <p class="hero-sub">Kenso is your personal finance dashboard — track spending, plan your budget, and understand your full financial picture with clear insights and zero guesswork.</p>
+    <div class="hero-actions">
+      <a href="budget.html" class="btn-primary">Start tracking free <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8.5 3.5L12 7L8.5 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="budget.html" class="btn-ghost">See how it works</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="float-badge">
+      <div class="float-badge-label">Net worth YTD</div>
+      <div class="float-badge-val">+17.3%</div>
+      <div class="float-badge-sub">↑ $12,440 this year</div>
+    </div>
+    <div class="dash-card">
+      <div class="dash-topbar"><div class="dash-title">Kenso Dashboard</div><div class="dash-date">Jun 1, 2026</div></div>
+      <div class="dash-tabs">
+        <button class="dash-tab active">Overview</button>
+        <button class="dash-tab">Budget</button>
+        <button class="dash-tab">Portfolio</button>
+        <button class="dash-tab">Goals</button>
+      </div>
+      <div class="kpi-row">
+        <div class="kpi"><div class="kpi-label">Net worth</div><div class="kpi-val">$84,210</div><div class="kpi-delta up">↑ +17.3% YTD</div></div>
+        <div class="kpi"><div class="kpi-label">Monthly savings</div><div class="kpi-val up">$1,840</div><div class="kpi-delta up">↑ +$220 vs last mo.</div></div>
+        <div class="kpi"><div class="kpi-label">Savings rate</div><div class="kpi-val gold">28.4%</div><div class="kpi-delta up">↑ top 18% of users</div></div>
+      </div>
+      <div class="spark-wrap">
+        <div class="spark-labels"><span>Net worth trend</span><span style="color:#1A6B3C;font-weight:500;">$84,210</span></div>
+        <svg class="spark-svg" viewBox="0 0 340 68" preserveAspectRatio="none">
+          <defs><linearGradient id="sg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0F1F4B" stop-opacity="0.12"/><stop offset="100%" stop-color="#0F1F4B" stop-opacity="0"/></linearGradient></defs>
+          <path d="M0 56 L28 52 L56 54 L84 46 L112 48 L140 42 L168 38 L196 32 L224 26 L252 20 L280 14 L308 8 L340 2" fill="none" stroke="#0F1F4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M0 56 L28 52 L56 54 L84 46 L112 48 L140 42 L168 38 L196 32 L224 26 L252 20 L280 14 L308 8 L340 2 L340 68 L0 68 Z" fill="url(#sg)"/>
+          <circle cx="340" cy="2" r="3" fill="#0F1F4B"/>
+        </svg>
+        <div class="spark-axis"><span>Jun '25</span><span>Sep '25</span><span>Dec '25</span><span>Mar '26</span><span>Jun '26</span></div>
+      </div>
+      <div class="alloc-title">Asset allocation</div>
+      <div class="alloc-row"><div class="alloc-dot" style="background:#0F1F4B"></div><div class="alloc-name">Equities</div><div class="alloc-bar-track"><div class="alloc-bar-fill" style="width:62%;background:#0F1F4B;"></div></div><div class="alloc-pct">62%</div></div>
+      <div class="alloc-row"><div class="alloc-dot" style="background:#C9881A"></div><div class="alloc-name">Bonds</div><div class="alloc-bar-track"><div class="alloc-bar-fill" style="width:22%;background:#C9881A;"></div></div><div class="alloc-pct">22%</div></div>
+      <div class="alloc-row"><div class="alloc-dot" style="background:#A8AFBD"></div><div class="alloc-name">Cash &amp; other</div><div class="alloc-bar-track"><div class="alloc-bar-fill" style="width:16%;background:#A8AFBD;"></div></div><div class="alloc-pct">16%</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">48<em>k</em></div><div class="stat-label">People building wealth</div></div>
+    <div class="stat-item"><div class="stat-num">$2.<em>1B</em></div><div class="stat-label">Total assets tracked</div></div>
+    <div class="stat-item"><div class="stat-num">23<em>%</em></div><div class="stat-label">Avg. savings rate increase</div></div>
+    <div class="stat-item"><div class="stat-num">4.<em>9</em>★</div><div class="stat-label">App store rating</div></div>
+  </div>
+</div>
+
+<section id="features" style="background:var(--bg);">
+  <div class="section-inner">
+    <div class="section-tag">Everything you need</div>
+    <h2>One dashboard. Your <em>entire</em> financial picture.</h2>
+    <p class="section-sub">No spreadsheets. No overwhelm. Just a clear view of your money and a simple path forward.</p>
+    <div class="features-grid">
+      <div class="feature-card"><div class="feature-icon icon-navy">📊</div><div class="feature-title">Intelligent budget tracking</div><div class="feature-desc">Auto-categorised transactions, spending pattern detection, and predictive alerts before you overspend — not after.</div></div>
+      <div class="feature-card"><div class="feature-icon icon-gold">📈</div><div class="feature-title">Investment tracker</div><div class="feature-desc">Log and monitor stocks, ETFs, crypto, and retirement accounts. See your allocation, performance history, and net worth in one place.</div></div>
+      <div class="feature-card"><div class="feature-icon icon-slate">🎓</div><div class="feature-title">Financial education</div><div class="feature-desc">Data-backed, bite-sized guides on investing, taxes, and wealth habits — written for real people, not finance professors.</div></div>
+      <div class="feature-card"><div class="feature-icon icon-navy">🎯</div><div class="feature-title">Goal forecasting</div><div class="feature-desc">Set targets and get a probability-backed projection of hitting them, plus a personalised monthly savings plan.</div></div>
+      <div class="feature-card"><div class="feature-icon icon-gold">💡</div><div class="feature-title">Weekly Kenso report</div><div class="feature-desc">Every Monday: what changed, what it means, and the one highest-leverage action to take this week.</div></div>
+      <div class="feature-card"><div class="feature-icon icon-slate">🔒</div><div class="feature-title">Private by design</div><div class="feature-desc">256-bit encryption and two-factor authentication. Kenso never holds your money — your data is never sold, shared, or used for ads.</div></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-section">
+  <div class="cta-inner">
+    <div class="hero-eyebrow" style="background:rgba(201,136,26,0.15);color:var(--gold-mid);margin:0 auto 22px;width:fit-content;"><span style="background:var(--gold-mid)"></span>Free to use — no credit card needed</div>
+    <h2>Start knowing your money <em>deeply</em></h2>
+    <p class="cta-sub">Join thousands of people who stopped guessing and started tracking. Takes 2 minutes to set up your first budget.</p>
+    <div class="cta-form">
+      <input class="cta-input" type="email" placeholder="Enter your email address">
+      <button class="cta-btn">Get started</button>
+    </div>
+    <p class="cta-trust">No spam. Unsubscribe any time. We never sell your data.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a href="index.html" class="nav-logo" style="text-decoration:none;">
+          <div class="nav-logo-mark"><svg viewBox="0 0 18 18" fill="none"><path d="M2 13 L6 7.5 L9.5 10.5 L13.5 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4 L14 4 L14 7" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          Kenso
+        </a>
+        <p class="footer-brand-desc">Your personal finance tracker and planner. Know your money deeply — and build the life you're working toward.</p>
+      </div>
+      <div><div class="footer-col-title">Product</div><div class="footer-links"><a href="budget.html">Budget tracker</a><a href="portfolio.html">Portfolio</a><a href="insights.html">Insights</a><a href="#">Goals</a><a href="#">Pricing</a></div></div>
+      <div><div class="footer-col-title">Learn</div><div class="footer-links"><a href="learn.html">Articles</a><a href="#">Guides</a><a href="#">Glossary</a><a href="#">Newsletter</a></div></div>
+      <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="#">About</a><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Kenso. All rights reserved.</span><span>Know your money deeply.</span></div>
+  </div>
+</footer>
+
+<script type="module" src="landing-ui.js"></script>
+</body>
+</html>

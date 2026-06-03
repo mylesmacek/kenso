@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /Users/mylesmacek/Documents/Claude/Projects/kenso/.claude)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(ls /usr/local/bin/node /opt/homebrew/bin/node ~/.nvm/versions/node/*/bin/node 2>/dev/null | head -3)",
+      "Read(//opt/homebrew/bin/**)",
+      "Read(//Users/mylesmacek/.local/**)",
+      "Bash(command -v ruby)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(chmod +x /Users/mylesmacek/Documents/Claude/Projects/kenso/serve.py)",
+      "Bash(brew install *)",
+      "Bash(/opt/homebrew/bin/brew install *)",
+      "Bash(ls /opt/homebrew/bin/node /opt/homebrew/bin/npx)",
+      "Bash(grep -n 'homebrew\\\\|PATH' /Users/mylesmacek/.zshrc 2>/dev/null | head -10; echo \"---\"; cat /Users/mylesmacek/.zprofile 2>/dev/null | head -10)",
+      "Bash(xargs kill -9)",
+      "Bash(node dev.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080/portfolio.html)",
+      "Bash(gh --version)",
+      "Bash(brew --version)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}

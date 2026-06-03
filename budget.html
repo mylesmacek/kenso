@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Budget — Kenso</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar" id="sidebar">
+    <a href="index.html" class="sidebar-logo">
+      <div class="sidebar-logo-mark">
+        <svg viewBox="0 0 18 18" fill="none"><path d="M2 13 L6 7.5 L9.5 10.5 L13.5 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 4 L14 4 L14 7" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <span class="sidebar-label">Kenso</span>
+    </a>
+
+    <nav class="sidebar-nav">
+      <a href="budget.html" class="sidebar-link active">
+        <svg viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M5 8h6M5 11h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <span class="sidebar-label">Budget</span>
+      </a>
+
+      <a href="portfolio.html" class="sidebar-link">
+        <svg viewBox="0 0 16 16" fill="none"><path d="M2 12 L5 8 L8 10 L12 4 L14 6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="sidebar-label">Portfolio</span>
+      </a>
+
+      <a href="insights.html" class="sidebar-link">
+        <svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.4"/><path d="M8 5v3l2 2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+        <span class="sidebar-label">Insights</span>
+      </a>
+
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-footer-avatar">M</div>
+      <div class="sidebar-footer-name">Myles</div>
+    </div>
+  </aside>
+
+  <!-- ── Main ── -->
+  <div class="app-main">
+
+    <main class="app-content">
+
+      <!-- Summary KPIs -->
+      <div class="summary-grid">
+        <div class="summary-card" style="position:relative;">
+          <div class="summary-card-label">Income</div>
+          <div class="summary-card-val" id="kpi-income">—</div>
+          <div class="summary-card-delta">This month</div>
+          <button id="edit-income-btn" class="edit-income-pill">
+            <svg width="11" height="11" viewBox="0 0 13 13" fill="none"><path d="M9 2l2 2-6 6H3V8l6-6z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Edit income
+          </button>
+        </div>
+        <div class="summary-card">
+          <div class="summary-card-label">Total spent</div>
+          <div class="summary-card-val red" id="kpi-spent">—</div>
+          <div class="summary-card-delta" id="kpi-spent-delta">Across all categories</div>
+        </div>
+        <div class="summary-card">
+          <div class="summary-card-label">Remaining</div>
+          <div class="summary-card-val green" id="kpi-remaining">—</div>
+          <div class="summary-card-delta">Left to spend or save</div>
+        </div>
+      </div>
+
+      <!-- Spending trend chart -->
+      <div class="panel" style="margin-bottom:20px;">
+        <div class="panel-header">
+          <span class="panel-title">Spending trend</span>
+          <div class="chart-tabs" id="chart-tabs">
+            <button class="chart-tab" data-months="1">1M</button>
+            <button class="chart-tab" data-months="3">3M</button>
+            <button class="chart-tab active" data-months="6">6M</button>
+            <button class="chart-tab" data-months="12">1Y</button>
+            <button class="chart-tab" data-months="36">3Y</button>
+          </div>
+        </div>
+        <div class="panel-body" style="padding-bottom:12px;">
+          <div id="spending-chart"></div>
+        </div>
+      </div>
+
+      <!-- Content grid -->
+      <div class="content-grid">
+
+        <!-- Main: category breakdown -->
+        <div>
+          <div class="panel">
+            <div class="panel-header">
+              <span class="panel-title">Spending by category</span>
+              <button class="panel-action" id="add-section-btn">+ Add section</button>
+            </div>
+            <div class="panel-body">
+              <!-- Insight pill -->
+              <div class="insight-pill-dash" id="budget-insight">
+                <div class="insight-icon">💡</div>
+                <div class="insight-text"><strong>Kenso insight:</strong> Loading your budget…</div>
+              </div>
+
+              <!-- Column headers -->
+              <div style="display:grid;grid-template-columns:10px 1fr 90px 60px 52px 32px;gap:10px;padding:0 0 8px;border-bottom:1px solid var(--border-soft);margin-bottom:4px;">
+                <div></div>
+                <div style="font-size:11px;font-weight:600;color:var(--ink-4);text-transform:uppercase;letter-spacing:.06em;">Category</div>
+                <div style="font-size:11px;font-weight:600;color:var(--ink-4);text-transform:uppercase;letter-spacing:.06em;">Spending</div>
+                <div style="font-size:11px;font-weight:600;color:var(--ink-4);text-transform:uppercase;letter-spacing:.06em;text-align:right;">Amount</div>
+                <div style="font-size:11px;font-weight:600;color:var(--ink-4);text-transform:uppercase;letter-spacing:.06em;text-align:right;">% Inc</div>
+                <div></div>
+              </div>
+
+              <!-- Rows injected by budget-ui.js -->
+              <div id="category-rows"></div>
+
+              <!-- Add row -->
+              <button class="add-cat-btn" id="add-cat-btn">
+                <svg viewBox="0 0 16 16" fill="none"><path d="M8 3v10M3 8h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                Add category
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /content-grid -->
+
+    </main>
+  </div><!-- /app-main -->
+</div><!-- /app-shell -->
+
+<!-- ── Add / Edit category modal ── -->
+<div class="modal-backdrop" id="modal-backdrop">
+  <div class="modal" id="cat-modal">
+    <div class="modal-title" id="modal-title">Add category</div>
+
+    <div class="form-field">
+      <label class="form-label" for="modal-name">Category name</label>
+      <input class="form-input" id="modal-name" type="text" placeholder="e.g. Groceries" maxlength="40">
+    </div>
+
+    <div class="form-field">
+      <label class="form-label">Section</label>
+      <div class="section-tabs" id="modal-section-tabs">
+        <!-- tabs injected by budget-ui.js -->
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div class="form-field">
+        <label class="form-label" for="modal-amount">Amount spent ($)</label>
+        <input class="form-input" id="modal-amount" type="number" min="0" step="0.01" placeholder="0">
+      </div>
+      <div class="form-field">
+        <label class="form-label" for="modal-budget">Budget limit ($) <span style="color:var(--ink-4);font-weight:400;">optional</span></label>
+        <input class="form-input" id="modal-budget" type="number" min="0" step="0.01" placeholder="0">
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label class="form-label">Colour</label>
+      <div class="color-swatches" id="color-swatches"></div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="btn-danger" id="modal-delete" style="display:none;">Delete</button>
+      <button class="btn-cancel" id="modal-cancel">Cancel</button>
+      <button class="btn-primary" id="modal-save">Save category</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Edit income modal ── -->
+<div class="modal-backdrop" id="income-backdrop">
+  <div class="modal" style="max-width:360px;">
+    <div class="modal-title">Edit monthly income</div>
+    <div class="form-field">
+      <label class="form-label" for="income-input">Monthly take-home income ($)</label>
+      <input class="form-input" id="income-input" type="number" min="0" step="1" placeholder="5000">
+    </div>
+    <div style="font-size:12px;color:var(--ink-4);margin-top:-8px;margin-bottom:16px;">
+      This is saved per month — adjust it anytime income changes.
+    </div>
+    <div class="modal-actions">
+      <button class="btn-cancel" id="income-cancel">Cancel</button>
+      <button class="btn-primary" id="income-save">Save income</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="budget-ui.js"></script>
+</body>
+</html>
